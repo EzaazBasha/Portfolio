@@ -1,0 +1,89 @@
+/* Navbar Styling to Match Dark Theme */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 40px;
+    background: linear-gradient(135deg, #1a1a1a, #000);
+    color: #f5f5f5;
+    box-shadow: 0 6px 12px rgba(255, 255, 0, 0.15);
+    border-bottom: 2px solid #ffcc00;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+/* Logo */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffcc00;
+    text-shadow: 0 1px 3px rgba(255, 255, 0, 0.2);
+}
+
+/* Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+/* Nav Anchor Tags */
+.nav-links a {
+    text-decoration: none;
+    color: #f5f5f5;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background: #ffcc00;
+    width: 0;
+    transition: width 0.3s;
+    margin-top: 5px;
+}
+
+.nav-links a:hover {
+    color: #ffcc00;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        margin-top: 10px;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+    }
+}
