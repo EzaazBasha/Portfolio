@@ -1,0 +1,67 @@
+.error-page {
+  text-align: center;
+  padding: 100px 20px;
+  color: #ffcc00;
+  background-color: #000;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.error-image {
+  width: 240px;
+  max-width: 90%;
+  margin-bottom: 30px;
+  filter: drop-shadow(0 4px 12px rgba(255, 204, 0, 0.3));
+  animation: float 2.5s ease-in-out infinite;
+}
+
+.error-page h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #ffcc00;
+}
+
+.error-page p {
+  font-size: 1rem;
+  color: #f5f5f5;
+  margin-bottom: 30px;
+  padding: 0 10%;
+}
+
+.back-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #ffcc00;
+  font-weight: bold;
+  border: 2px solid #ffcc00;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.back-link:hover {
+  background-color: #ffcc00;
+  color: #000;
+}
+
+.error-page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 20px;
+  color: #ffcc00;
+  background-color: #000;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Floating animation for the image */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+}

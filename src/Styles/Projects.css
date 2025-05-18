@@ -1,0 +1,32 @@
+/* Add transparent border to all project cards to prevent layout shift */
+.projects-grid-item {
+  margin-bottom: 20px; /* vertical spacing */
+  border: 2px solid transparent; /* reserve space for border */
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Highlight effect for the selected project card using box-shadow only */
+.highlight-card {
+  border-color: #ffcc00; /* change border color to visible */
+  box-shadow: 0 0 20px 4px #ffcc00;
+  animation: highlight-fade 3s ease-in-out;
+}
+
+/* Utility class for justified text aligned to the right */
+.justified-right {
+  width: 600px;
+  margin-left: auto;
+  text-align: justify;
+}
+
+/* Animation for highlight fade */
+@keyframes highlight-fade {
+  0% {
+    box-shadow: 0 0 20px 4px #ffcc00;
+    border-color: #ffcc00;
+  }
+  100% {
+    box-shadow: none;
+    border-color: transparent;
+  }
+}

@@ -37,21 +37,21 @@ body {
 
 /* Name */
 .name {
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
 /* Role */
 .role {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-bottom: 25px;
     font-weight: 500;
 }
 
 /* Summary */
 .summary {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     margin-bottom: 35px;
     opacity: 0.9;
 }
@@ -81,24 +81,24 @@ body {
 
 /* Profile Image */
 .hero-image img {
-    width: 380px;
-    height: 380px;
+    width: 340px;
+    height: 340px;
     object-fit: cover;
     border-radius: 50%;
     border: 6px solid #ffcc00;
     box-shadow: 0 12px 30px rgba(255, 255, 0, 0.3);
     background: transparent;
     display: block;
-    margin-left: auto;             /* Align right */
-    margin-top: 20px;              /* Shift down */
-    transform: translateY(10px);   /* Fine-tune downward shift */
+    margin-left: auto;
+    margin-top: 20px;
+    transform: translateY(10px);
 }
 
-/* Section Cards - Introduction, Projects, Skills, Certifications, Soft Skills, Internship */
+/* Section Cards */
 .introduction,
 .projects-preview,
 .skills-section,
-.certifications,
+.aboutme,
 .soft-skills,
 .internship {
     background: linear-gradient(135deg, #1a1a1a, #000);
@@ -110,61 +110,81 @@ body {
     transition: 0.3s;
 }
 
-/* Section Headings */
+/* Section Headings (Medium size) */
 .introduction h3,
 .projects-preview h3,
 .skills-section h3,
-.certifications h3,
-.soft-skills h3,
+.aboutme h3,
 .internship h3 {
     color: #ffcc00;
     margin-bottom: 20px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-/* Introduction List (like Internship style) */
+/* Introduction List */
 .introduction ul {
     list-style: none;
     padding-left: 0;
 }
 
 .introduction li {
-    font-size: 1.1rem;       /* Match internship font size */
-    margin-bottom: 18px;     /* Same spacing */
+    font-size: 1.05rem;
+    margin-bottom: 18px;
     line-height: 1.6;
     position: relative;
-    padding-left: 28px;      /* Same padding for icon */
+    padding-left: 28px;
 }
 
 .introduction li::before {
-    content: '⭐';            /* Star icon for intro items */
+    content: '⭐';
     position: absolute;
     left: 0;
     top: 2px;
-    font-size: 1.3rem;       /* Same size as internship icon */
+    font-size: 1.3rem;
     color: #ffcc00;
 }
 
 /* Projects Preview List */
+
+.projects-preview {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.projects-preview {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.projects-preview.home-preview:hover {
+  transform: translateY(-8px);
+  background-color: #ffcc00;
+  box-shadow: 0 12px 30px rgba(255, 255, 0, 0.3);
+  cursor: pointer;
+  color: #000;
+}
+
+
 .projects-preview ul {
     padding-left: 0;
     list-style: none;
 }
 
 .projects-preview li {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     margin-bottom: 15px;
     display: flex;
     align-items: center;
 }
 
 .projects-preview li::before {
-    content: '📁';
     margin-right: 10px;
     font-size: 1.2rem;
 }
 
 .projects-preview li a {
-    color: #ffcc00;
+    color: #e9e8e4e9;
     text-decoration: none;
     transition: 0.3s;
 }
@@ -178,27 +198,30 @@ body {
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
+    gap: 25px;
+    justify-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
 
 .skills-grid li {
+    width: 180px;
+    aspect-ratio: 1 / 1;
     background-color: #000;
     color: #ffcc00;
-    padding: 14px;
-    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.05rem;
     border-radius: 10px;
     text-align: center;
-    font-weight: 500;
+    font-weight: 600;
     position: relative;
-    list-style: none;
     transition: 0.3s;
-}
-
-.skills-grid li::before {
-    content: '🔧';
-    display: block;
-    font-size: 1.2rem;
-    margin-bottom: 8px;
+    margin: auto;
+    padding: 10px;
 }
 
 .skills-grid li:hover {
@@ -206,27 +229,131 @@ body {
     color: #000;
 }
 
+.skills-grid li .skill-emoji {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    line-height: 1;
+    display: block;
+}
+/* Skills Section */
+
+.skills-section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.skills-section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.skills-section:hover {
+    transform: translateY(-8px);
+    background-color: #ffcc00;
+    box-shadow: 0 12px 30px rgba(255, 255, 0, 0.3);
+    cursor: pointer;
+}
+
 /* Internship Section */
+
 .internship ul {
     list-style: none;
     padding-left: 0;
 }
 
-.internship li {
-    font-size: 1.1rem;       /* Normalized font size */
-    margin-bottom: 18px;
-    line-height: 1.6;
-    position: relative;
-    padding-left: 28px;
-}
-
 .internship li::before {
-    content: '💼';
     position: absolute;
     left: 0;
     top: 2px;
     font-size: 1.3rem;
     color: #ffcc00;
+}
+
+/* Internship Hover Animation (Consistent with other cards) */
+.internship {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Internship Hover Animation without changing font color */
+.internship {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.internship:hover {
+    transform: translateY(-8px);
+    background-color: #ffcc00;
+    /* Keep font color unchanged */
+    box-shadow: 0 12px 30px rgba(255, 255, 0, 0.3);
+    cursor: pointer;
+}
+
+
+/* About Me Section */
+.aboutme {
+    margin-top: 3rem;
+}
+
+.aboutme ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 0;
+    margin: 0 auto;
+    list-style: none;
+    justify-items: center;
+    max-width: 900px;
+}
+
+.aboutme li {
+    background: #000;
+    border-radius: 12px;
+    padding: 1.5rem 2rem;
+    width: 180px;
+    box-shadow: 0 6px 18px rgba(255, 255, 0, 0.15);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default;
+    color: #ffcc00;
+}
+
+.aboutme li:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(255, 255, 0, 0.3);
+    background-color: #ffcc00;
+    color: #000;
+}
+
+.aboutme .skill-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.aboutme .skill-emoji {
+    font-size: 2.8rem;
+    margin-bottom: 0.6rem;
+    user-select: none;
+}
+
+.aboutme .skill-text {
+    font-size: 1.15rem;
+    font-weight: 600;
+    user-select: none;
+}
+
+.aboutme {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.aboutme {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.aboutme:hover {
+    transform: translateY(-8px);
+    background-color: #ffcc00;
+    box-shadow: 0 12px 30px rgba(255, 255, 0, 0.3);
+    cursor: pointer;
 }
 
 /* Responsive Layout */
@@ -245,16 +372,73 @@ body {
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 768px) {
+    .home-container {
+        padding: 40px 15px;
+    }
+
+    .hero {
+        padding: 40px 15px;
+        gap: 20px;
+    }
+
     .name {
         font-size: 2.5rem;
     }
 
     .role {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
     .summary {
         font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .cta-buttons .btn {
+        padding: 10px 20px;
+        font-size: 0.95rem;
+    }
+
+    .hero-image img {
+        width: 240px;
+        height: 240px;
+        margin-top: 0;
+    }
+
+    .introduction,
+    .projects-preview,
+    .skills-section,
+    .certifications,
+    .soft-skills,
+    .internship {
+        padding: 25px 15px;
+        margin: 30px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .name {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-size: 2.3rem;
+    }
+
+    .role {
+        font-size: 1.1rem;
+    }
+
+    .summary {
+        font-size: 0.95rem;
+    }
+
+    .hero-image img {
+        width: 200px;
+        height: 200px;
     }
 }
