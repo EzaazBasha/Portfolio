@@ -1,0 +1,100 @@
+/* Contact.css */
+
+.contact-section {
+  width: 100%;
+  max-width: 1100px; /* match banner max width if it has one */
+  margin: 0 auto 2rem auto;
+  padding: 2.5rem;
+  text-align: center;
+  background-color: #121211;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(255, 255, 0, 0.1);
+}
+
+
+.contact-section h3 {
+  color: #b38f00; /* dark gold/yellow for headings */
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.contact-section p.summary {
+  color: #666;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  max-width: 500px; /* limit max width */
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.contact-section h3 {
+  color: #ffeb3b; /* bright yellow */
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.contact-section p.summary {
+  color: #ffffff; /* white */
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.9rem 1rem;
+  border-radius: 12px;
+  border: 2px solid #ffd600; /* bright yellow border */
+  font-size: 1rem;
+  width: 100%;
+  font-weight: 500;
+  color: #333;
+  background-color: #fff;
+  box-shadow: inset 0 0 6px #fff8c4;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #b38f00; /* darker gold/yellow on focus */
+  box-shadow: 0 0 10px #b38f00;
+  background-color: #fffbe6;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form button {
+  background-color: #ffeb3b; /* bright yellow */
+  color: #5a4200; /* dark brown/gold */
+  font-weight: 700;
+  border: none;
+  padding: 0.85rem;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(255, 235, 59, 0.5);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #b38f00; /* dark gold */
+  color: #fffbe6;
+  box-shadow: 0 8px 24px rgba(179, 143, 0, 0.8);
+}

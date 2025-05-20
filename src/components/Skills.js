@@ -5,11 +5,14 @@ import '../Styles/Skills.css'; // New CSS file
 import skillsBanner from '../Assets/images/Skills.png';
 
 const skillsData = {
-  "Frontend": ["React.js", "HTML5", "CSS3", "JavaScript", "Responsive Design", "UI/UX Design", "Tailwind CSS"],
-  "Backend": ["Node.js", "Express.js", "ServiceNow", "REST APIs"],
-  "Database": ["MongoDB", "Firebase", "SQL"],
-  "Dev Tools": ["Git", "GitHub", "Vercel", "Postman", "VS Code"],
-  "Other Skills": ["Workflow Automation", "Email Notifications", "SLA Management", "Agile Methodology"]
+  "💻 Languages": ["C Programming","Java(Core)","Python","JavaScript"],
+  "🌐 Web Technologies": ["HTML", "CSS", "JavaScript","React js"],
+  "🗄️ Database": ["MongoDB","SQL"],
+  "⚙️ Dev Tools": ["Git", "GitHub","VS Code","Canva","Figma"],
+  "🏗️ Frame Works": ["Node.js","Express.js"],
+  "🛠️ ServiceNow": ["Core ServiceNow Skills", "Development Skills", "Customization & UI/UX", "Security & Access Control", "Other Platform Capabilities"],
+  "🧩 Other Skills": ["Object-orirnted Programming", "Data Structures", "Agile Methodology", "API Management and Integration"],
+  "🧠 Soft Skills":["Time Management","Good Commumication","Team Person","Adaptability"]
 };
 
 function Skills() {
@@ -33,7 +36,7 @@ function Skills() {
       <section className="projects-preview">
         <h3>💡 My Technical Skills</h3>
         <p className="summary skills-summary">
-          Here's a categorized breakdown of the technologies and tools I work with regularly.
+          Here’s a glimpse into the tools and talents that turn ideas into impact.
         </p>
 
         <div className="skills-cards-container">
